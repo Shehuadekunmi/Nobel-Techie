@@ -1,0 +1,142 @@
+.dri {
+  height: 750px;
+  padding: 54px 20px;
+  background: #f1f8fe;
+}
+
+.img{
+  display: none;
+}
+.dri h1 {
+  width: 300px;
+  font-family: Playfair Display;
+  font-weight: 500;
+  font-size: 30px;
+  color: #442604;
+}
+.dri hr {
+  width: 300px;
+  border: 1px solid #000000;
+}
+.dri p, .jud p {
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 16px;
+  color: #89580a;
+}
+.homo3 img{
+  width: 100%;
+  margin: 0px auto;
+}
+
+.jud {
+  height: 850px;
+  padding: 64px 20px;
+  gap: 40px;
+  background: #fff3e7;
+}
+.jud h1 {
+  font-family: Playfair Display;
+  font-weight: 500;
+  font-size: 28px;
+}
+.jud1 img {
+  width: 300px;
+  border-radius: 4px;
+  height: 400px;
+  background: #dcb9001a;
+}
+
+@media (min-width: 768px) {
+  .homo3{
+    display: none;
+  }
+  .img{
+    display: block;
+  }
+    .dri{
+        height: 600px;
+    }
+  .dri h1 {
+    width: 70%;
+  }
+  .dri p {
+    width: 90%;
+  }
+
+  .img img {
+    width: 100%;
+  }
+  .jud h1 {
+    width: 50%;
+  }
+  .jd1{
+    width: 40%;
+  }
+  .jd1 img{
+    width: 100%;
+  }
+}
+
+@media (min-width: 960px) {
+  .dri,
+  .jud {
+    height: 1100px;
+  }
+  .dri h1 {
+    font-size: 46px;
+    padding-left: 20px;
+    width: 922px;
+    height: 64px;
+  }
+  .hr {
+    width: 430px;
+    position: relative;
+    left: 910px;
+    bottom: 35px;
+  }
+  .hr hr {
+    width: 100%;
+    border: 2px solid #000000;
+  }
+  .dri p {
+    width: 704px;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  .img {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .img img {
+    width: 98%;
+    height: 600px;
+    margin-left: 20px;
+  }
+  .jud h1 {
+    width: 841px;
+    font-size: 48px;
+    padding-left: 20px;
+  }
+
+  .jud p {
+    width: 500px;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  .hrr {
+    width: 500px;
+    position: relative;
+    left: 830px;
+    bottom: 25px;
+  }
+  .hrr hr {
+    width: 100%;
+    border: 2px solid #000000;
+  }
+  .jud1 img {
+    width: 500px;
+    height: 600px;
+    margin-left: 20px;
+  }
+}

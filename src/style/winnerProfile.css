@@ -1,0 +1,129 @@
+.winner-profile p{
+    color: #343A40;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 15px;
+}
+.winner-profile {
+    background: #FFF3E7;
+width: 100vw;
+padding: 50px 0px;
+}
+
+.winner-profile h2{
+    font-family: Playfair Display;
+    font-weight: 500;
+    font-size: 24px;
+ color: #212529;
+ padding: 0px 5px;
+    
+}
+
+.winner-profile h1{
+    font-family: Playfair Display;
+font-weight: 500;
+font-size: 60px;
+padding: 0px 10px;
+background: linear-gradient(1.99deg, #DCB900 -9.71%, #1A1600 90.12%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+display: inline-block;
+
+}
+.profile-img{
+    width: 96%;
+    margin: 0px auto;
+}
+.profile-img img{
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.profile-img2{
+    width: 96%;
+    margin: 0px auto;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 20px;
+}
+.profile-img2 img{
+    width: 120px;
+    height: 106px;
+    border-radius: 4px;
+    margin: 20px 0px;
+}
+.profile-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: cente;
+    width: 90%;
+}
+.profile-text h2{
+    font-family: Playfair Display;
+font-weight: 500;
+font-size: 18px;
+}
+
+@media (min-width:960px) {
+    .winner-profile p{
+        font-size: 24px;
+        width: 75%;
+        margin: 0px auto;
+
+    }
+    .winner-profile h2{
+      font-weight: bolder;
+      padding: 20px 0px;
+        width: 75%;
+        margin: 0px auto;
+        font-size: 36px;
+
+    }
+    .winner-profile h1{
+        font-size: 128px;
+        width: 100%;
+    }
+    .flg2{
+        position: relative;
+        left: 1350px;
+        bottom: 100px;
+    }
+  .flg3{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+  .flg3-p{
+    width: 42% !important;
+  }
+    .flg4{
+       display: none;
+    }
+
+    .profile-img2, .profile-text {
+            font-size: 24px;
+            width: 75%;
+            margin: 0px auto;
+    }
+
+    .profile-text{
+        width: 100%;
+   
+    }
+
+    .profile-img2 img{
+        width: 170px;
+      
+    }
+    .profile-text h2{
+  font-size: 30px;
+       margin-right: 300px;
+    }
+
+    .profile-text p{
+        font-size: 18px;
+        margin-right: 300px;
+    }
+}

@@ -1,0 +1,101 @@
+.personal{
+    background: linear-gradient(0deg, #0A2540, #0A2540),
+linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+height: 300px;
+}
+
+.personal h1{
+    font-family: Playfair Display;
+font-weight: 500;
+font-size: 48px;
+padding: 40px 10px;
+color: #F8F9FA;
+padding-left: 10px;
+}
+.personal_info{
+    width: 100vw;
+    margin: 50px 0px;
+}
+.person-form{
+    width: 90%;
+    margin: 0px auto;
+}
+.person-form h6{
+    font-family: Lato;
+    font-weight: 600;
+    font-size: 18px;
+color: #353444;    
+}
+.person-form input{
+    margin: 7px auto;
+    width: 99%;
+height: 46px;
+padding: 16px 10px;
+border-radius: 4px;
+border-width: 1px;
+
+}
+.person-form button{
+    width: 99%;
+height: 46px;
+padding: 10px 32px;
+gap: 10px;
+border-radius: 4px;
+background: #FFD700;
+margin: 20px 0px;
+}
+.prevoius button{
+background: transparent;
+padding: 10px 32px;
+border-radius: 4px;
+border: 1px solid #442604
+}
+.person-form textarea{
+    width: 99%;
+height: 120px;
+padding: 6px  10px;
+border-radius: 4px;
+border: 1px solid #6C757D;
+color: ;
+}
+
+.person-form small{
+    font-family: Lato;
+font-weight: 400;
+font-size: 12px;
+}
+
+@media (min-width:960px) {
+
+.personal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 60%;
+   height: 654px;
+   margin: 0px auto;
+}
+.personal_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 654px;
+    margin-top: 0px;
+}
+.person-form{
+    width: 90%;
+    margin: 0px auto;
+}
+.personal h1{
+    width: 500px;   
+}
+.person-form input{
+ margin: 17px auto;
+ height: 56px;
+}
+.person-form button{
+    height: 56px;
+}
+
+}

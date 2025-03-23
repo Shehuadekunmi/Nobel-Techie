@@ -1,0 +1,73 @@
+.cert-hero, .cert-detail{
+    background: linear-gradient(0deg, #0A2540, #0A2540),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  padding: 40px 0px;
+}
+
+.cert-detail-img{
+    width: 170px;
+height: 150px;
+border-radius: 4px;
+background: #DCB9000D;
+}
+.cert-info{
+    width: 90%;
+    margin: 0px auto;
+}
+.cert-info hr{
+    border-bottom: 1px solid #CED4DA
+}
+.cert-info input, button{
+    width: 100%;
+height: 56;
+padding: 10px 5px;
+border-radius: 4px;
+border: 1px solid #F8F9FA;
+margin: 30px 0px;
+}
+.cert-info button{
+    background: #FFD700;
+    font-family: Lato;
+    font-weight: 400;
+}
+@media (min-width:960px) {
+    .cert-info{
+        display: flex;
+        justify-content: center;
+        height: 100vh; /* Covers the entire viewport */
+        width: 100vw; /* Ensures full width */
+    }
+    .cert-desk1{
+        width: 50%;
+        /* height: 502px; */
+        background-image: url('../assets//win.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .cert-desk2{
+        width: 40%;
+        background: #F1F8FE;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .cert-desk1 h5, hr, span{
+        width: 60%;
+      position: relative;
+      top: 500px;
+      left: 40px;
+    }
+
+    .cert-info button{
+        width: 90%;
+    height: 56px;
+    padding: 16px 32px;
+    }
+    .cert-info input{
+        width: 90%;
+        height: 56px;
+        padding: 16px 10px;
+    }
+}

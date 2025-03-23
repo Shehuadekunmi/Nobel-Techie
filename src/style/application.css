@@ -1,0 +1,129 @@
+.app{
+    background: linear-gradient(0deg, #0A2540, #0A2540),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    padding: 40px 20px;
+}
+
+.app h1{
+    font-family: Playfair Display;
+    font-weight: 500;
+    font-size: 48px;
+color: #F8F9FA;    
+}
+.app p{
+    font-family: Lato;
+font-weight: 400;
+font-size: 14px;
+line-height: 27px;
+letter-spacing: 0px;
+
+}
+.app button, .app1 button{
+    width: 80vw;
+padding-top: 16px 32px;
+border-radius: 4px;
+background: #FFD700;
+}
+
+.app1{
+    background: #F1F8FE;
+    padding: 64px 20px;
+}
+.app1 h2{
+    font-family: Playfair Display;
+font-weight: 500;
+font-size: 30px;
+}
+.app1 hr{
+    border: 1px solid #000000
+}
+.app1 li{
+    font-family: Lato;
+font-weight: 400;
+font-size: 14px;
+color: #89580A;
+list-style-type: none;
+}
+.app1 button{
+    margin: 20px 0px;
+}
+/* .app2{
+  border:  2px solid darkblue;
+  width: 100%;
+} */
+.app2 img{
+ width: 100%;
+ margin: 0px auto;
+}
+.app3, .desk{
+    display: none;
+}
+
+@media (min-width:720px) {
+    .app3, .desk{
+        display: block;
+        
+    }
+    .app3 img{
+        width: 100%;
+ margin: 0px auto;
+    }
+    .app2, .mob{
+        display: none;
+    }
+    .app h1, p{
+       width: 70vw;  
+    }
+
+    .app button, .app1 button{
+        width: 40vw;
+    }
+}
+
+@media (min-width:960px) {
+    .app{
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    /* .app h1, p{
+        width: 700px;
+        margin: 0 auto;
+    }
+    .app p{
+font-size: 20px;
+text-align: center; */
+
+    }
+
+    .app button{
+        width: 15%;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+    .app1 button{
+        width: 15%;
+    }
+    .app1 h2{
+        font-size: 48px;
+    }
+    .app1{
+        padding-left: 40px;
+    }
+    .app1 li{
+        font-size: 24px;
+    }
+
+    .apr {
+        width: 60%;
+        position: relative;
+        left: 520px;
+        bottom: 25px;
+      }
+      .hrr hr {
+        width: 100%;
+        border: 2px solid #000000;
+      }
+}

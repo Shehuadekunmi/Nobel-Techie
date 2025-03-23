@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; 
+} */
+
+.head{
+    background: linear-gradient(0deg, #0A2540, #0A2540),
+linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+
+}
+
+.mod{
+  background: linear-gradient(0deg, #0A2540, #0A2540),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  
+  padding: 90px 0px;
+}
+.mod h1{
+  font-family: Playfair Display;
+font-weight: 500;
+font-size: 40px;
+color: #F8F9FA;
+}
+.mod h1, p{
+  padding: 0px 10px;
+}
+
+@media (min-width:960px) {
+  .mod{
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .message{
+    width: 58%;
+   text-align: center;
+  }
+  .message h1{
+    font-size: 48px;
+    width: 70%;
+    text-align: center;
+    margin: 0px auto;
+  }
+  .message p{
+    padding: 10px 0px;
+    width: 100%;
+    font-size: 24px;
+  }
+  .message Link{
+    color: #FFD700;
+  }
+}

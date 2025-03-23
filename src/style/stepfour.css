@@ -1,0 +1,143 @@
+.left-section {
+    background: linear-gradient(0deg, #0A2540, #0A2540),
+linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+height: 300px;
+  }
+  
+  .left-section h1{
+    font-family: Playfair Display;
+    font-weight: 500;
+    font-size: 48px;
+    padding: 40px 10px;
+    color: #F8F9FA;
+    padding-left: 10px;
+  }
+  
+  .right-section {
+    width: 100vw;
+    margin: 50px 0px;
+  }
+  
+  textarea {
+    width: 100%;
+height: 120px;
+padding: 6px  10px;
+border-radius: 4px;
+border: 1px solid #6C757D;
+  }
+  .outcome{
+    width: 95%;
+    margin: 0px auto;
+  }
+  
+  .file-upload {
+    display: flex;
+    gap: 5px;
+    justify-content: space-around;
+    margin: 15px 0;
+  }
+  .file-upload .label{
+    font-size: 11px;
+    width: 60%;
+  }
+  
+  .upload-btn {
+    width: 77px;
+    height: 33;
+    padding: 4px 8px;
+    /* padding-right: 16px;
+    padding-bottom: 8px;
+    padding-left: 16px; */
+    color: white;
+    border-radius: 4px;
+    background: #442604;
+  }
+  
+  .confirmation {
+    font-family: Lato;
+font-weight: 400;
+font-size: 12px;
+padding-bottom: 20px;
+  }
+  
+  .buttons {
+   display:  flex;
+   flex-direction: column;
+   width: 95%;
+   margin: 10px auto;
+  }
+  
+  .next-btn {
+    width: 353;
+    height: 56p;
+    padding: 10px 20px;
+  margin: 20px 0px;
+    border-radius: 4px;
+    background: #FFD700;
+    cursor: pointer;
+  }
+  
+  .prev-btn {
+    width: 353;
+    height: 56;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid #442604;    
+    cursor: pointer;
+  }
+
+  @media (min-width:720px) {
+    .right-section {
+        margin-top: 200px;
+      }
+      .prev-btn, .next-btn{
+        width: 60%;
+        margin: 10px auto;
+      }
+      .file-upload .label{
+        font-size: 16px;
+      }
+  }
+
+  @media (min-width:960px) {
+    .evidence-container{
+
+    }
+    .left-section{
+       display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 60%;
+   height: 774px;
+   margin: 0px auto;
+    }
+    .right-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 40%;
+        height: 774px;
+        margin-top: 0px;
+    }
+
+    .file-upload{
+        width: 95%;
+    }
+    .confirmation{
+        width: 95%;
+        font-size: 16px;
+    }
+    .prev-btn, .next-btn{
+        width: 95%;
+padding: 16px 32px;
+
+    }
+    .file-upload .label{
+        font-size: 16px;
+      }
+      .left-section h1{
+        font-size: 60px;
+      padding-left: 5rem;
+      }
+  }

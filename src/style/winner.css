@@ -1,0 +1,44 @@
+.winner-hero{
+    background: linear-gradient(0deg, #0A2540, #0A2540),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  
+  padding: 90px 0px;
+}
+.winner-hero h1{
+    font-family: Playfair Display;
+font-weight: 500;
+font-size: 48px;
+padding:0px 10px ;
+
+}
+.winner-details{
+    background: #F1F8FE;
+    margin: 60px 0px;
+}
+.winner-detail{
+    width: 90%;
+    margin: 0px auto;
+    background: #F8F9FA;
+
+}
+.winner-detail-img{
+    width: 100%;
+    margin: 0px a;
+}
+
+@media (min-width:960px) {
+    .winner-details{
+        display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  height: 100vh;
+    }
+
+    .winner-hero h1{
+     display:  flex;
+     justify-content: center;
+     align-items: center;
+    
+    }
+}
