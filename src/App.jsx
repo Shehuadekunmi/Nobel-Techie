@@ -14,6 +14,8 @@ import Message from './pages/Message'
 import Winners from './pages/Winners'
 import Certificate from './pages/Certificate'
 import WinnerProfile from './pages/WinnerProfile'
+import Admin from './pages/Admin'
+import AdminPage from './pages/AdminPage'
 
 function App() {
 
@@ -34,6 +36,8 @@ function App() {
         <Route path='/winner' element={<Winners/>}/>
         <Route path='/cert' element={<Certificate/>}/>
         <Route path='/pro' element={<WinnerProfile/>}/>
+        <Route path='/admin' element={<Admin/>}/>
+        <Route path='/adminpage' element={<AdminPage/>}/>
 
 
 

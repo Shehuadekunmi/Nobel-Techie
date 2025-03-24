@@ -1,0 +1,98 @@
+.adminpage {
+  background: #fff3e7;
+  height: 100;
+  padding: 20px 0px;
+}
+
+#admin-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 10px;
+}
+#admin-header button {
+  gap: 10px;
+  border-radius: 4px;
+  padding: 8px 32px;
+  background: #ffd700;
+}
+
+.adminpage p {
+  color: #212529;
+}
+.admin-info-one,
+.admin-info-two {
+  width: 95%;
+  margin: 0px auto;
+}
+.admin-info-one h2 {
+  font-family: Lato;
+  font-weight: 600;
+  font-size: 18px;
+  padding-top: 40px;
+}
+.admin-info-one input,
+textarea {
+  width: 95%;
+  margin: 10px 2px;
+  width: 400;
+  height: 56;
+  border-radius: 4px;
+  padding: 16px 10px;
+  border: 1px solid #6c757d;
+}
+.admin-info-two input,
+textarea {
+  width: 95%;
+  margin: 10px 2px;
+  border-radius: 4px;
+  padding: 16px 10px;
+  border: 1px solid #6c757d;
+}
+
+.admin-image {
+  display: flex;
+  gap: 10px;
+  height: 50px;
+  margin: 20px 0px;
+  margin-bottom: 40px;
+  width: 95%;
+}
+.admin-image button {
+  width: 77;
+  height: 33px;
+  gap: 10px;
+  border-radius: 4px;
+  padding: 4px 8px;
+  background: #442604;
+  font-family: Lato;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: #f8f9fa;
+}
+.admin-image p {
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+@media (min-width: 960px) {
+  #adminpage {
+    display: flex;
+  }
+
+  .admin-info-one {
+    width: 35%;
+  }
+  .admin-info-two {
+    width: 60%;
+    margin-top: 40px;
+  }
+  .admin-info-two textarea {
+    height: 462px;
+    padding: 20px;
+  }
+  .admin-image p {
+    width: 340px;
+  }
+}
