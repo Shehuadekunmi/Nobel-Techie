@@ -35,10 +35,11 @@ function App() {
         <Route path='/message' element={<Message/>}/>
         <Route path='/winner' element={<Winners/>}/>
         <Route path='/cert' element={<Certificate/>}/>
-        <Route path='/pro' element={<WinnerProfile/>}/>
+        <Route path='/pro/:id' element={<WinnerProfile/>}/>
         <Route path='/admin' element={<Admin/>}/>
         <Route path='/adminpage' element={<AdminPage/>}/>
 
+        {/* <Route path="*" element={<h1>404 - Page Not Found</h1>} /> */}
 
 
       </Routes>
