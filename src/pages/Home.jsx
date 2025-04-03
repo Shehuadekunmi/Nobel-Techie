@@ -4,7 +4,7 @@ import img from "../assets/data.png";
 import img1 from "../assets/image1.png";
 import img6 from "../assets/img6.png";
 import Header from "../components/Header";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import img11 from '../assets/data1.png'
 import Hero from "../components/Hero";
 
