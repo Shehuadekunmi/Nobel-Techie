@@ -1,13 +1,9 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import l from "../assets/logo.png";
 import { Link } from "react-router";
-import Hero from "./Hero";
 
 const Header = () => {
   return (
@@ -15,33 +11,34 @@ const Header = () => {
       <Navbar expand="lg" className="bg-blac ">
         <Container fluid className="lg-d-flx jusitfy-around">
           <Navbar.Brand href="#">
-            <img src={l} alt="" />{" "}
+           <Link to='/' className="pt-lg-3 mx-lg-4">  <img src={l} alt="" />{" "} </Link> 
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" className="text-whit bg-white md-bg-white" />
+          <div className="Navbar.Toggle">
+          <Navbar.Toggle aria-controls="navbarScroll" className="text-whit bg-white  md-bg-white" />
+          </div>
+         
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
+              style={{ maxHeight: "100p" }}
+              navbarScrol
             ></Nav>
 
             <div className="d-flex jusitify-aroun gap-4 mx-">
               <Nav
                 className="me-auto my-2 my-lg-0 "
                 style={{ maxHeight: "100px" }}
-                navbarScroll
+                navbarScrol
               >
-                <Link href="#action1" className="text-white underline-1">Home</Link>
-                <Link className="text-white"> About</Link>
-                <Link className="text-white"> Judges</Link>
-                <Link className="text-white"> Winners</Link>
-                <Link className="text-white">How to apply</Link>
+                <Link to='/' href="#action1" className="text-white text-decoration-none mx-2 pt-lg-3 my-1 my-md-0 py-md-1 underline-1">Home</Link>
+                <Link to='/winner' className="text-white text-decoration-none mx-2 pt-lg-3 my-1 my-md-0 py-md-1"> Winners</Link>
+                <Link to='/app' className="text-white text-decoration-none mx-2 pt-lg-3 my-1 my-md-0 py-md-1">How to Apply</Link>
 
                 <Link
-                  to="/register"
-                  className="text-decoration-none text-dark fw-bold tag me-2"
+                  to="/app"
+                  className="text-decoration-none text-dark fw-bold tag mx-2 pt-lg-3 Nav"
                 >
-                  <button className="btn btn-primary">Apply Now</button>
+                  <button className="btn btn-warnin ">Apply Now</button>
                 </Link>
 
               </Nav>
@@ -51,7 +48,6 @@ const Header = () => {
         </Container>
       </Navbar>
 
-      <Hero/>
     </div>
   );
 };

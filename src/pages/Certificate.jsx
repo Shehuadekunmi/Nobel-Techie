@@ -1,16 +1,54 @@
-import React, { useState } from "react";
-import winner from "../assets/winner.png";
+import React, { useEffect, useState } from "react";
+import Loading from "../components/Loading";
 import text from "../assets/text.png";
 import "../style/certificate.css";
 import logo from "../assets/logo.png";
-import API from "../api";
-import { useNavigate } from "react-router";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
 
 const Certificate = () => {
+  const { winnerId } = useParams();
+  const [winner, setWinner] = useState(null);
   const [certNum, setCertNum] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const fetchWinner = async () => {
+      try {
+        const res = await axios.get(`/api/auth/winners/${winnerId}`, {
+          signal: controller.signal,
+          params: { ts: Date.now() }, // Cache buster
+        });
+
+        if (!res.data?.data?.winner) {
+          throw new Error("Invalid winner data structure");
+        }
+
+        setWinner(res.data.data.winner);
+        // setCertNum(res.data.data.winner.certificateNumber); 
+        setError("");
+      } catch (error) {
+        if (error.name !== "CanceledError") {
+          setError(
+            error.response?.data?.message || "Failed to load certificate"
+          );
+          console.error("Fetch error:", error);
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (winnerId) {
+      fetchWinner();
+    }
+
+    return () => controller.abort();
+  }, [winnerId]);
 
   const handleVerify = async (e) => {
     e.preventDefault();
@@ -18,12 +56,15 @@ const Certificate = () => {
       setError("Please enter a certificate number");
       return;
     }
+    if (certNum.trim() !== winner?.certificateNumber) {
+      setError("Invalid certificate number");
+      return;
+    }
     setLoading(true);
     setError("");
 
     try {
-      const res = await API.get(`/api/certificates/${certNum.trim()}`);
-      navigate(`/pro/${res.data.data.winner._id}`);
+      navigate(`/pro/${winner._id}`);
     } catch (error) {
       setError(error.response?.data?.message || "Invalid certificate number");
     } finally {
@@ -31,33 +72,60 @@ const Certificate = () => {
     }
   };
 
+  if (!winner) return <div className="loading"> <Loading/> </div>;
+
   return (
-    <div>
-      <div className="cert-hero">
-        <h5 className="text-white px-2 mob">
+    <div className="certificate">
+      <div className="cert-hero position-relative">
+        <Link to="/winner" className="pt-lg-3 mx-lg-4 mo">
+          <img
+            src={logo}
+            alt="Company Logo"
+            className="m-2 m-lg-4 position-absolute top-0 start-0"
+          />
+        </Link>
+        <h5 className="text-white px-2 mob pt-5">
           Enter Certification Number to Access Profile
         </h5>
       </div>
 
-      <div className="cert-detail pb-5 mb-5 ">
+      <div className="cert-detail pb-5 mb-5">
         <div className="cert-info">
-          <div className="cert-desk1">
-            <div className="desk" id="desk">
-              <img src={logo} alt="" />
+          <div
+            className="cert-desk1"
+            style={{
+              position: "relative",
+              backgroundImage: `url(${winner.image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              height: "300px",
+            }}
+          >
+
+            <div className="winner-data">
+              <h5 className="d-flex justify gap- text-white ">
+                Name: {winner.candidateName} 
+              </h5>
+              <div className="my-lg-2">
+                <span className="detail-field text-white ">
+                  Role: {winner.role}
+                </span>
+                <br />
+              </div>
+
+              <div className="my-lg-2">
+                <span className="text-white ">Company: {winner.company}</span>
+                <br />
+              </div>
             </div>
-            <img src={winner} alt="" className="cert-detail-img mob" />
-            <h5 className="d-flex justify-content-between py-3 text-white">
-              Adrijana Husic <img src={text} alt="" />
-            </h5>
-            <input type="text" placeholder="Role" id="role" /> <br /> <br />
-            <input type="text" placeholder="Company Name" id="role" />
           </div>
 
           <div className="cert-desk2">
             <h5 className="px-2 desk">
               Enter Certification Number to Access Profile
             </h5>
-            {error && <div style={{ color: "red" }}>{error}</div>}
+            {error && <div className="error-message">{error}</div>}
             <input
               type="text"
               placeholder="Enter Certification Number"

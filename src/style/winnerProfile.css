@@ -43,7 +43,6 @@ display: inline-block;
     width: 96%;
     margin: 0px auto;
     display: flex;
-    /* justify-content: space-between; */
     gap: 20px;
 }
 .profile-img2 img{
@@ -56,7 +55,6 @@ display: inline-block;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: cente;
     width: 90%;
 }
 .profile-text h2{
@@ -65,11 +63,22 @@ font-weight: 500;
 font-size: 18px;
 }
 
+@media (min-width:760px) {
+.winner-profile p{
+    width: 95%;
+    line-height: 40px;
+    margin: 0px auto;
+
+}
+
+}
+
 @media (min-width:960px) {
     .winner-profile p{
         font-size: 24px;
         width: 75%;
         margin: 0px auto;
+        line-height: 48px;
 
     }
     .winner-profile h2{
@@ -99,13 +108,22 @@ font-size: 18px;
     width: 42% !important;
   }
     .flg4{
-       display: none;
+       display: flex;
+       gap: 190px;
+       padding:0px 10px;
+       margin:20px 0px;
     }
 
     .profile-img2, .profile-text {
             font-size: 24px;
             width: 75%;
             margin: 0px auto;
+    }
+
+    .profile-img img{
+        width: 100%;
+        height: 600px;
+        margin: 20px 0px;
     }
 
     .profile-text{

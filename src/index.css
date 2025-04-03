@@ -1,0 +1,43 @@
+/* Add to stepfour.css */
+.error-message {
+    color: #dc3545;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .file-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .file-name {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .remove-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .remove-btn:hover {
+    text-decoration: underline;
+  }
+  
+  .upload-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+
+
+  /* POP */
+  .pop{
+    
+  }
+

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { loginUser, setAuthToken } from '../api';
 import '../style/admin.css';
-import { Navigate, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
+import Loading from '../components/Loading'
 
 const Admin = () => {
   const [loginID, setLoginID] = useState('');
@@ -28,6 +29,8 @@ const Admin = () => {
       setLoading(false); // Hide loader
     }
   };
+  console.log("Stored Token:", localStorage.getItem("token"));
+
 
   return (
     <div className='admin' id='admin'>
@@ -52,7 +55,7 @@ const Admin = () => {
           {loading ? 'Signing in...' : 'Sign in'}
         </button>
 
-        {loading && <p>Loading...</p>}
+        {loading && <p> <Loading/> </p>}
         {error && <p style={{ color: 'red' }}>{error}</p>}
         {success && <p style={{ color: 'green' }}>{success}</p>}
       </div>

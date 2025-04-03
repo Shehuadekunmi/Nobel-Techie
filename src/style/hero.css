@@ -1,11 +1,12 @@
-/* .hero{
+.hero{
     height: 656px;
     gap: 80px;
-    background: linear-gradient(0deg, #212529, #212529)
-} */
+    background: linear-gradient(0deg, #0A2540, #0A2540),
+linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
 .hono{
-margin-top: 30px;
-padding: 0px 14px; 
+margin-top: 30p;
+padding: 50px 14px; 
 height: 289px;
 gap: 16px;
 
@@ -30,8 +31,8 @@ color: #F8F9FA;
 
 .hono button{
     width: 270px;
-height: 55px;
-padding: 12px 18px;
+height: 35px;
+padding: 6px 8px !important;
 margin-top: 20px;
 border-radius: 4px;
 background: #FFD700;
@@ -40,6 +41,7 @@ background: #FFD700;
 
 .hero img{
     width: 130px;
+    margin-top: 20px;
 height: 240px;
 border-radius: 3px;
 }
@@ -62,6 +64,7 @@ border-radius: 3px;
     }
     .hono button{
         margin-left: 20px;
+        height: 55px;
     }
     .hero img{
         width: 250px;

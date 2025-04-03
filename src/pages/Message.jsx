@@ -1,8 +1,15 @@
 import React from "react";
 import { Link } from "react-router";
+import { ImCross } from "react-icons/im";
 const Message = () => {
   return (
+    <div className="cross">
+ <Link to="/step">
+      <ImCross style={{color: 'red', fontSize:'60px'}}/>
+      </Link>
+   
     <div className="mod">
+     
       <div className="message">
         <h1>Thank you for your submission!</h1>
         <p>
@@ -22,6 +29,7 @@ const Message = () => {
           </Link>{" "}
         </p>
       </div>
+    </div>
     </div>
   );
 };

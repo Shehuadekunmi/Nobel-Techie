@@ -113,5 +113,6 @@ p {
   }
   .foo3 li{
     line-height: 40px;
+    font-size: 20x;
   }
 }

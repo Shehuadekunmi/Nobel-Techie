@@ -7,6 +7,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+.Nav button{
+  background: #FFD700;
+  width: 140px;
+padding: 8px 16px;
+border-radius: 4px;
+}
+
+.error{
+  font-size: 10px;
+  position: relative;
+  top: -12px;
+  color: red;
+  
+}
 
 /* html, body, #root {
   margin: 0;
@@ -24,9 +38,14 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 .mod{
   background: linear-gradient(0deg, #0A2540, #0A2540),
   linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  
   padding: 90px 0px;
 }
+.cross{
+  background: linear-gradient(0deg, #0A2540, #0A2540),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  padding: 10px 20px;
+}
+
 .mod h1{
   font-family: Playfair Display;
 font-weight: 500;
@@ -36,6 +55,32 @@ color: #F8F9FA;
 .mod h1, p{
   padding: 0px 10px;
 }
+
+.pop{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100vh;
+}
+.pop button{
+  width: 300px;
+height: 68px;
+padding: 16px 32px;
+border-radius: 4px;
+background: #FFD700;
+}
+.pop span{
+  color: #212529;
+  font-family: Playfair Display;
+font-weight: 500;
+font-size: 36px;
+text-align: center;
+
+}
+
+
 
 @media (min-width:960px) {
   .mod{
@@ -63,4 +108,10 @@ color: #F8F9FA;
   .message Link{
     color: #FFD700;
   }
+  .pop{
+    display: flex;
+    justify-content: space-around;
+    gap: 400px;
+  }
+ 
 }

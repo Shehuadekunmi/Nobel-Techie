@@ -13,7 +13,9 @@ padding:0px 10px ;
 }
 .winner-details{
     background: #F1F8FE;
+    height: 100% !important;
     margin: 60px 0px;
+
 }
 .winner-detail{
     width: 90%;
@@ -30,7 +32,6 @@ padding:0px 10px ;
     .winner-details{
         display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
   gap: 10px;
   height: 100vh;
     }
