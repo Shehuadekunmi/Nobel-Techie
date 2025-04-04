@@ -14,7 +14,7 @@ const Hero = () => {
         <h1>Honoring Technological Excellence</h1>
         <p>Join the global movement that celebrates innovative contributions towards technological advancement</p>
 
-        <Link><button>Become a Noble Techy</button></Link>
+        <Link to='/app'><button>Become a Noble Techy</button></Link>
       </div>
 
       <div className='d-flex overflow-x-scroll mt-5 gap-3 ps-2 mx-4'>
