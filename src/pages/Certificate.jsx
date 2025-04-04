@@ -14,12 +14,15 @@ const Certificate = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
+
   useEffect(() => {
     const controller = new AbortController();
 
     const fetchWinner = async () => {
       try {
-        const res = await axios.get(`/api/auth/winners/${winnerId}`, {
+        const res = await axios.get(`${API_URL}/auth/winners/${winnerId}`, {
           signal: controller.signal,
           params: { ts: Date.now() }, // Cache buster
         });
@@ -48,7 +51,7 @@ const Certificate = () => {
     }
 
     return () => controller.abort();
-  }, [winnerId]);
+  }, [winnerId], [API_URL]);
 
   const handleVerify = async (e) => {
     e.preventDefault();
@@ -70,7 +73,7 @@ const Certificate = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }; 
 
   if (!winner) return <div className="loading"> <Loading/> </div>;
 
@@ -97,7 +100,7 @@ const Certificate = () => {
               position: "relative",
               backgroundImage: `url(${winner.image})`,
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "top",
               backgroundRepeat: "no-repeat",
               height: "300px",
             }}

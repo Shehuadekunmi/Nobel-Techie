@@ -25,6 +25,9 @@ const AdminPage = () => {
   const [isPublished, setIsPublished] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
+
   // Handle text inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -93,7 +96,7 @@ const AdminPage = () => {
   
     try {
       // Send FormData to backend (to  handle Cloudinary upload)
-      const response = await axios.post("/api/auth/winners", formDataToSend, {
+      const response = await axios.post(`${API_URL}/auth/winners`, formDataToSend, { 
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -106,6 +109,7 @@ const AdminPage = () => {
       }
     } catch (error) {
       console.error("Error publishing data:", error);
+      setErrors("Failed to load winners.");
     } finally {
       setLoading(false);
     }

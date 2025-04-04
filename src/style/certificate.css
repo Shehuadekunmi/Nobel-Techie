@@ -19,12 +19,15 @@
 .winner-details{
   background: transparent;
 }
+.desk{
+  display: none;
+}
 
 .certificate{
   height: 100vh;
 }
 .cert-desk1 h5{
-  width: 90px;
+  width: 90p;
 }
 
 .cert-info .input,
@@ -53,8 +56,28 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
 
 .winner-data{
-  margin-top: 220px;
-  /* color: #F8F9FA; */
+  padding-top: 170px;
+  color: #F8F9FA;
+}
+
+@media (min-width:760px) {
+  .mob{
+    display: none;
+  }
+  .desk{
+    display: block;
+    color: #F8F9FA;
+    padding-top: 20px;
+  }
+  .winner-data{
+    padding-top: 190px;
+  }
+  .cert-desk1{
+    margin-top: 70px;
+  }
+  .cert-desk1 img{
+    width: 30px;
+  }
 }
 
 @media (min-width: 960px) {
@@ -72,6 +95,7 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   .cert-desk2 {
     width: 40%;
     height: 700px;
+    margin-top: 70px;
     background: #f1f8fe;
     display: flex;
     flex-direction: column;
@@ -130,5 +154,8 @@ button {
    position: relative;
    top: 20px;
    left: 40px;
+}
+.desk{
+  color: #0a2540;
 }
 }

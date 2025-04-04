@@ -1,12 +1,6 @@
 import axios from "axios";
 
-// Create an Axios instance
-// const API = axios.create({
-//   baseURL: "https://nobel-techie-server.onrender.com",
-//   headers: {
-//     "Content-Type": "application/json",
-//   },
-// });
+const API_URL = import.meta.env.VITE_API_URL;
 
 
 const isDevelopment = import.meta.env.MODE === 'development';
@@ -30,7 +24,7 @@ export const setAuthToken = (token) => {
 // Function to handle login
 export const loginUser = async (email, password) => {
   try {
-    const response = await API.post("/api/auth/login", { email, password });
+    const response = await axios.post(`${API_URL}/auth/login`, { email, password });
     return response.data; // Return response data (e.g., token)
   } catch (error) {
     throw error.response?.data?.message || "Login failed"; // Throw error message

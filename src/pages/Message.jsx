@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 import { ImCross } from "react-icons/im";
+import '../style/message.css'
 const Message = () => {
   return (
     <div className="cross">
@@ -12,7 +13,7 @@ const Message = () => {
      
       <div className="message">
         <h1>Thank you for your submission!</h1>
-        <p>
+        <p className="pt-lg-5">
           Our judges will review your application and respond within 30 working
           days. All communication will be conducted via email.
         </p>

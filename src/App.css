@@ -46,15 +46,6 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   padding: 10px 20px;
 }
 
-.mod h1{
-  font-family: Playfair Display;
-font-weight: 500;
-font-size: 40px;
-color: #F8F9FA;
-}
-.mod h1, p{
-  padding: 0px 10px;
-}
 
 .pop{
   display: flex;
@@ -83,31 +74,14 @@ text-align: center;
 
 
 @media (min-width:960px) {
-  .mod{
+  /* .mod{
     height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .message{
-    width: 58%;
-   text-align: center;
-  }
-  .message h1{
-    font-size: 48px;
-    width: 70%;
-    text-align: center;
-    margin: 0px auto;
-  }
-  .message p{
-    padding: 10px 0px;
-    width: 100%;
-    font-size: 24px;
-  }
-  .message Link{
-    color: #FFD700;
-  }
+  } */
+ 
   .pop{
     display: flex;
     justify-content: space-around;

@@ -14,6 +14,9 @@ const Stepfour = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -88,10 +91,9 @@ console.log("FormData Entries:");
 for (let pair of formData.entries()) {
     console.log(pair[0], pair[1]);
 }
-      const response = await axios.post("/api/applications", formData, {
+      const response = await axios.post(`${API_URL}/applications`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-
       console.log("API Response:", response.data);
       localStorage.clear();
       navigate("/message");

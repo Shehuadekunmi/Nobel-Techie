@@ -12,18 +12,14 @@ const Winners = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-  const API_URL = import.meta.env.VITE_API_URL; // Use environment variable
+
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchWinners = async () => {
       try {
-
         const res = await axios.get(`${API_URL}/auth/winners`, {
-          headers: {
-            "Cache-Control": "no-cache, no-store, must-revalidate",
-            Pragma: "no-cache",
-            Expires: "0",
-          },
+        
         });
 
         console.log("API Response:", res.data);
@@ -42,7 +38,7 @@ const Winners = () => {
     };
 
     fetchWinners();
-  }, []);
+  }, [API_URL]);
 
   if (loading) return <p> <Loading/> </p>;
 

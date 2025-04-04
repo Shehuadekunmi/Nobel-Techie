@@ -10,7 +10,8 @@ const Admin = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
 
   const handleLogin = async () => {
     setLoading(true); // Show loader
