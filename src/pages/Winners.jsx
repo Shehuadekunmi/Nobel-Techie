@@ -5,17 +5,20 @@ import API from "../api";
 import Loading from "../components/Loading";
 import Header from "../components/Header";
 import Footer2 from "../components/Footer2";
+import axios from "axios";
 
 const Winners = () => {
   const [winners, setWinners] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL; // Use environment variable
 
   useEffect(() => {
     const fetchWinners = async () => {
       try {
-        const res = await API.get("/api/auth/winners", {
+
+        const res = await axios.get(`${API_URL}/auth/winners`, {
           headers: {
             "Cache-Control": "no-cache, no-store, must-revalidate",
             Pragma: "no-cache",

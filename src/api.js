@@ -1,12 +1,22 @@
 import axios from "axios";
 
 // Create an Axios instance
+// const API = axios.create({
+//   baseURL: "https://nobel-techie-server.onrender.com",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// });
+
+
+const isDevelopment = import.meta.env.MODE === 'development';
+
 const API = axios.create({
-  baseURL: "https://nobel-techie-server.onrender.com",
-  headers: {
-    "Content-Type": "application/json",
-  },
+  baseURL: isDevelopment
+    ? 'http://localhost:5000/api/auth' // Local backend (proxy target)
+    : 'https://nobel-techie-server.onrender.com/api/auth' // Production URL
 });
+
 
 // Function to set the Authorization token
 export const setAuthToken = (token) => {
