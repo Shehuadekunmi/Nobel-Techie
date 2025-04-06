@@ -1,7 +1,7 @@
 .left-section {
     background: linear-gradient(0deg, #0A2540, #0A2540),
 linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-height: 300px;
+height: 350px;
   }
   
   .left-section h1{
@@ -11,6 +11,7 @@ height: 300px;
     padding: 40px 10px;
     color: #F8F9FA;
     padding-left: 10px;
+    padding-top: 90px !important;
   }
   
   .right-section {
@@ -108,7 +109,7 @@ padding-bottom: 20px;
     justify-content: center;
     align-items: center;
    width: 60%;
-   height: 774px;
+   height: 808px;
    margin: 0px auto;
     }
     .right-section{
@@ -117,7 +118,7 @@ padding-bottom: 20px;
         align-items: center;
         flex-direction: column;
         width: 40%;
-        height: 774px;
+        height: 808px;
         margin-top: 0px;
     }
 

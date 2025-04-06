@@ -67,14 +67,14 @@ const StepThree = () => {
           <img
             src={l}
             alt=""
-            className="m-2 m-lg-4 position-absolute
+            className="m-2  m-lg-4 position-absolute
             top-0
            start-0 "
            
           />{" "}
         </Link>
 
-        <h1>Step 3/4: Innovation Contribution Details</h1>
+        <h1 className="step-paragraph">Step 3/4: Innovation Contribution Details</h1>
       </div>
 
       <section className="personal_info">
@@ -94,13 +94,13 @@ const StepThree = () => {
 
             <small>{wordCount} words (Minimum of 300 words required)</small>
 
-            <button type="submit" className="btn" disabled={isSubmitting || wordCount < 300}>
+            <button type="submit" className="bt" disabled={isSubmitting || wordCount < 300}>
               {isSubmitting ? "Processing..." : "Next"} <FaArrowRight />
             </button>
           </form>
 
           <div className="previous">
-            <button className="btn" onClick={() => navigate("/step2")}>
+            <button className="bt" onClick={() => navigate("/step2")}>
               <FaArrowLeft /> Previous
             </button>
           </div>

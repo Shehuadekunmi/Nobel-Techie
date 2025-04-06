@@ -7,7 +7,7 @@ const Pop = () => {
       <span>Publication Successful</span>
 
 
-      <Link to='/adminpage'><button className='btn'>Continue</button></Link>
+      <Link to='/adminpage'><button className='bt'>Continue</button></Link>
     </div>
   )
 };

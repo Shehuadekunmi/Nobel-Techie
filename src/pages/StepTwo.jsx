@@ -70,7 +70,7 @@ const StepTwo = () => {
           />{" "}
         </Link>
 
-        <h1>Step 2/4: Organization Information</h1>
+        <h1 className="step-paragraph">Step 2/4: Organization Information</h1>
       </div>
 
       <section className="personal_info">
@@ -110,13 +110,13 @@ const StepTwo = () => {
             {errors.organization?.position && <small style={{ color: "red" }}>{errors.organization.position}</small>}
             <br />
 
-            <button type="submit" className="btn" disabled={isSubmitting}>
+            <button type="submit" className="bt" disabled={isSubmitting}>
               {isSubmitting ? "Processing..." : "Next"} <FaArrowRight />
             </button>
           </form>
 
           <div className="previous">
-            <button className="btn" onClick={() => navigate("/step")}>
+            <button className="bt" onClick={() => navigate("/step")}>
               <FaArrowLeft /> Previous
             </button>
           </div>

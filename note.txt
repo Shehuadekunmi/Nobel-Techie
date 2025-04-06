@@ -10,14 +10,16 @@ const Header = () => {
 
   return (
     <div className="head">
-      <Navbar expand="lg" className=" ">
+      <Navbar expand="lg" className="bg-dark" variant="dark" fixed="top">
         <Container fluid className="d-lg-flx justify-around">
-          <Navbar.Brand href="#">
+
+          <Navbar.Brand>
             <Link to="/" className="pt-lg-3 mx-lg-4">
               {" "}
               <img src={l} alt="" />{" "}
             </Link>
           </Navbar.Brand>
+
           <div className="Navbar.Toggle">
             <Navbar.Toggle
               aria-controls="navbarScroll"
@@ -40,13 +42,12 @@ const Header = () => {
               >
                  <Link
                 to="/"
-                className={`nav-lin text-white text-decoration-none mx-2 pt-lg-3 my-1 my-md-0 py-md-1 ${
+                className={`nav-link text-white text-decoration-none mx-2 pt-lg-3 my-1 my-md-0 py-md-1 ${
                   location.pathname === "/" ? "text-white fw-bold" : "text-light"
                 }`}
               >
                 Home
               </Link>
-
                 <Link
                   to="/winner"
                   className={`text-white text-decoration-none mx-2 pt-lg-3 my-1 my-md-0 py-md-1 ${
@@ -55,7 +56,6 @@ const Header = () => {
                   {" "}
                   Winners
                 </Link>
-                
                 <Link
                   to="/app"
                   className={`text-white text-decoration-none mx-2 pt-lg-3 my-1 my-md-0 py-md-1${
@@ -68,7 +68,7 @@ const Header = () => {
                   to="/app"
                   className=" nav-link text-decoration-none text-dark fw-bold tag mx-2 pt-lg-3 Nav"
                 >
-                  <button className="btn btn-warning  ">Apply Now</button>
+                  <button className="btn  ">Apply Now</button>
                 </Link>
               </Nav>
             </div>

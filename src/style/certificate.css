@@ -59,8 +59,29 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   padding-top: 170px;
   color: #F8F9FA;
 }
+.winner-data h5, .winner-data span{
+  color: #0a2540 !important;
+}
+.cert-desk1 h5{
+  border: none;
+  border-bottom: 1px solid #ADB5BD;
+gap: 120px !important;
+font-family: Playfair Display;
+font-weight: 500;
+font-size: 40px;
+
+
+}
+.cert-desk1 span{
+  width: 500px;
+  height: 30px;
+  border-bottom: 1px solid #ADB5BD;
+  font-family: Lato;
+  font-weight: 400;
+}
 
 @media (min-width:760px) {
+
   .mob{
     display: none;
   }
@@ -81,26 +102,37 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
 
 @media (min-width: 960px) {
+  .cert-hero,
+  .cert-detail{
+    background: transparent !important;
+    padding: 0px !important;
+  }
+  .mo{
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    z-index: 100;
+  }
   .cert-info {
     display: flex;
     justify-content: center;
-    height: 100vh; 
     width: 100vw; 
   }
   .cert-desk1 {
-    height: 700px !important ;
-    width: 50%;
+    height: 808px !important ;
+    width: 895px;
     border: none !important;
+    margin-top: 0px;
   }
   .cert-desk2 {
-    width: 40%;
-    height: 700px;
-    margin-top: 70px;
+    width: 617px;
+    height: 808px;
     background: #f1f8fe;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 0px;
   }
 
   .cert-desk1 h5{
@@ -127,7 +159,7 @@ font-size: 40px;
     border-bottom: 1px solid #ADB5BD;
     font-family: Lato;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .cert-info button {
@@ -139,7 +171,7 @@ font-size: 40px;
     width: 90%;
     height: 56px;
     padding: 16px 10px;
-  }
+  }  
 
   .cert-hero,
 .cert-detail {
@@ -158,4 +190,8 @@ button {
 .desk{
   color: #0a2540;
 }
+.winner-data{
+  padding-top: 300px;
+}
+
 }

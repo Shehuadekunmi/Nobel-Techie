@@ -121,7 +121,7 @@ const AdminPage = () => {
     <div className="adminpage">
       <div id="admin-header">
         <img src={logo} alt="Logo" />
-        <button className="btn" onClick={handleSubmit} disabled={loading}>
+        <button className="bt" onClick={handleSubmit} disabled={loading}>
           {loading ? "Publishing..." : "Publish"}
         </button>
       </div>

@@ -79,12 +79,12 @@ const Certificate = () => {
 
   return (
     <div className="certificate">
-      <div className="cert-hero position-relative">
-        <Link to="/winner" className="pt-lg-3 mx-lg-4 mo">
+      <div className="cert-hero position-relative ">
+        <Link to="/winner" className="pt-lg- mx-lg- mo">
           <img
             src={logo}
             alt="Company Logo"
-            className="m-2 m-lg-4 position-absolute top-0 start-0"
+            className="m-2 m-lg- position-absolute top- start-"
           />
         </Link>
         <h5 className="text-white px-2 mob pt-5">
@@ -103,22 +103,23 @@ const Certificate = () => {
               backgroundPosition: "top",
               backgroundRepeat: "no-repeat",
               height: "300px",
+              zIndex: "1"
             }}
           >
 
             <div className="winner-data">
               <h5 className="d-flex justify gap- text-white ">
-                Name: {winner.candidateName} 
+              {winner.candidateName} 
               </h5>
               <div className="my-lg-2">
                 <span className="detail-field text-white ">
-                  Role: {winner.role}
+               {winner.role}
                 </span>
                 <br />
               </div>
 
               <div className="my-lg-2">
-                <span className="text-white ">Company: {winner.company}</span>
+                <span className="text-white "> {winner.company}</span>
                 <br />
               </div>
             </div>

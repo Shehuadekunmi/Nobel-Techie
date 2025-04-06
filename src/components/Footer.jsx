@@ -4,15 +4,7 @@ import { Link } from "react-router-dom";
 const footer = () => {
   return (
     <div className="footer">
-      <section className="foo1">
-        <h2>Are you pushing the boundaries of technology?</h2>
-        <p>Apply today and let your innovation be recognized.</p>
-
-        <Link to='/app'>
-        <button>Become a NobleTechie</button>
-        </Link>
-       
-      </section>
+     
 
       <section className="foo2">
         <div>

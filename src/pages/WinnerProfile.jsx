@@ -51,13 +51,11 @@ const WinnerProfile = () => {
             <div className="flg4">
               <p>
                 {" "}
-                Certificate Issued:{" "}
-                {new Date(winnerData.issuedAt).toDateString()}{" "}
+                Certified Number-{winnerData.certificateNumber}
               </p>
 
               <p>
-                {winnerData.year} NobleTechie winner and {winnerData.role} at{" "}
-                {winnerData.company}
+                {winnerData.year} NobleTechie winner and {winnerData.role} at {winnerData.company}
               </p>
             </div>
           </div>

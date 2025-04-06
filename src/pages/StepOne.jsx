@@ -63,7 +63,7 @@ const StepOne = () => {
            
           />{" "}
         </Link>
-        <h1> Step 1/4: Personal Information </h1>
+        <h1 className="step-paragraph"> Step 1/4: Personal Information </h1>
       </div>
 
       <section className="personal_info">
@@ -115,7 +115,7 @@ const StepOne = () => {
             )}
             <br />
 
-            <button type="submit" className="btn" disabled={isSubmitting}>
+            <button type="submit" className="bt" disabled={isSubmitting}>
               {isSubmitting ? "Processing..." : "Next"} <FaArrowRight />
             </button>
           </form>

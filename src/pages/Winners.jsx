@@ -1,29 +1,40 @@
 import React, { useEffect, useState } from "react";
 import "../style/winner.css";
 import { useNavigate } from "react-router";
+import axios from "axios";
 import API from "../api";
 import Loading from "../components/Loading";
 import Header from "../components/Header";
 import Footer2 from "../components/Footer2";
-import axios from "axios";
 
 const Winners = () => {
   const [winners, setWinners] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [initialCount, setInitialCount] = useState(20);
   const navigate = useNavigate();
-
   const API_URL = import.meta.env.VITE_API_URL;
 
+  // Detect screen size
+  useEffect(() => {
+    const updateInitialCount = () => {
+      const isMobile = window.innerWidth <= 768;
+      const count = isMobile ? 10 : 12;
+      setInitialCount(count);
+      setVisibleCount(count);
+    };
+
+    updateInitialCount();
+    window.addEventListener("resize", updateInitialCount);
+    return () => window.removeEventListener("resize", updateInitialCount);
+  }, []);
+
+  // Fetch winners from API
   useEffect(() => {
     const fetchWinners = async () => {
       try {
-        const res = await axios.get(`${API_URL}/auth/winners`, {
-        
-        });
-
-        console.log("API Response:", res.data);
-
+        const res = await axios.get(`${API_URL}/auth/winners`);
         if (res.data?.data?.winners && Array.isArray(res.data.data.winners)) {
           setWinners(res.data.data.winners);
         } else {
@@ -40,22 +51,29 @@ const Winners = () => {
     fetchWinners();
   }, [API_URL]);
 
-  if (loading) return <p> <Loading/> </p>;
+  const handleViewMore = () => {
+    setVisibleCount((prev) => prev + initialCount);
+  };
+
+  if (loading) return <p><Loading /></p>;
 
   return (
     <div>
-      <Header/>
+      <Header />
       <div className="winner-hero">
-        <h1 className="text-white">Meet the NobleTechie Winners</h1>
+        <div className="winner-hero-CTA">
+
+        <h1 className="text-white py-lg-5">Meet the NobleTechie Winners</h1>
+        </div>
       </div>
 
-      <div className="py-5 winner-details">
-        {loading ? (
-          <p> <Loading/> </p>
-        ) : error ? (
+      <div className="winner-details11">
+     
+      <div className="py- winner-details">
+        {error ? (
           <p style={{ color: "red" }}>{error}</p>
         ) : (
-          winners.map((winner) => (
+          winners.slice(0, visibleCount).map((winner) => (
             <div
               key={winner._id}
               className="winner-detail pb-5 mb-5"
@@ -66,10 +84,10 @@ const Winners = () => {
                 src={winner.image || winner}
                 alt={winner.name}
                 className="winner-detail-img"
-                loading="lazy" 
+                loading="lazy"
               />
               <h5 className="d-flex justify-content-between mx-2 py-3">
-                {winner.candidateName} 
+                {winner.candidateName}
               </h5>
               <hr />
               <span className="mx-2">{winner.role}</span>
@@ -78,8 +96,20 @@ const Winners = () => {
             </div>
           ))
         )}
+       
       </div>
-      <Footer2/>
+      <div className="view-more">
+      {visibleCount < winners.length && (
+          <div className="text-center mt-">
+            <button className="bt btn-primar" onClick={handleViewMore}>
+            Load More
+            </button>
+          </div>
+        )}
+      </div>
+
+      </div>
+      <Footer2 />
     </div>
   );
 };

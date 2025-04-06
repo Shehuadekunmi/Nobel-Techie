@@ -1,6 +1,6 @@
 .footer {
   background: linear-gradient(0deg, #0a2540, #0a2540),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
   padding: 50px 20px;
 }
 .footer h2,
@@ -8,21 +8,8 @@ h3,
 li,
 p {
   color: #f8f9fa;
-}
+} 
 
-.foo1 h2 {
-  font-family: Playfair Display;
-  font-weight: 500;
-  font-size: 38px;
-}
-.foo1 p {
-  font-family: Lato;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 27px;
-  letter-spacing: 0px;
-}
-.foo1 button,
 .foo2 button {
   width: 273px;
   height: 56;

@@ -1,21 +1,48 @@
 .winner-hero{
     background: linear-gradient(0deg, #0A2540, #0A2540),
   linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  
-  padding: 90px 0px;
+  height: 300px;
+  /* padding: 30px 0px; */
+  position: relative;
+}
+
+.winner-hero-CTA{
+    position: relative;
+    z-index: 1;
+    color: #F8F9FA;
+    height: 100%; 
+    /* padding: 10px; */
+    /* padding-top: 40px; */
+}
+.winner-hero-CTA::before{
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/whatApp.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cente;
+    opacity: 0.2;
+    z-index: -1;
 }
 .winner-hero h1{
     font-family: Playfair Display;
 font-weight: 500;
 font-size: 48px;
-padding:0px 10px ;
+padding:30px 10px ;
 
 }
-.winner-details{
+.winner-details, .winner-details11{
     background: #F1F8FE;
     height: 100% !important;
-    margin: 60px 0px;
+    /* margin: 60px 0px; */
 
+}
+.winner-details11{
+        padding: 60px 0px;
 }
 .winner-detail{
     width: 90%;
@@ -27,8 +54,27 @@ padding:0px 10px ;
     width: 100%;
     margin: 0px a;
 }
-
+.view-more button{
+    width: 90%;
+padding: 16px 32px;
+border-radius: 4px;
+border: 1px solid #442604
+}
+@media (min-width:760px) {
+    .winner-hero{
+        height: 250px;
+    }
+    .winner-hero-CTA{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: ;
+    }
+}
 @media (min-width:960px) {
+    .winner-hero{
+        height: 400px;
+    }
     .winner-details{
         display: grid;
   grid-template-columns: repeat(3, 1fr);

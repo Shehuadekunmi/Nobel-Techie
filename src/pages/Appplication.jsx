@@ -10,11 +10,15 @@ const Appplication = () => {
     <div>
       <Header/>
       <section className="app">
+        <div className="app-CTA">
+
+       
         <h1>Become the Next NobleTechie</h1>
         <p className="mob">Are you pushing the boundaries of technology? Submit your application and let your innovation be recognized on a global stage</p>
         <p className="desk">Are you pushing the boundaries of technology? <br /> Submit your application and let your innovation be recognized on a global stage</p>
 
-       <Link to='/step' className="text-decoration-none link"> <button className="btn">Start Application</button> </Link> 
+       <Link to='/step' className="text-decoration-none link"> <button className="">Start Application</button> </Link> 
+       </div>
       </section>
 
       <section className="app1">
@@ -24,7 +28,7 @@ const Appplication = () => {
         <li>2. Details of your impact on technological advancement"</li>
         <li>3. Supporting documents and CV"</li>
         
-        <Link to='/step' className="text-decoration-none"> <button className="btn">Start Application</button> </Link> 
+        <Link to='/step' className="text-decoration-none"> <button className="bt">Start Application</button> </Link> 
 
 
         <div className="app2">

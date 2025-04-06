@@ -1,9 +1,32 @@
 .hero{
-    height: 656px;
+    height: 676px;
     gap: 80px;
     background: linear-gradient(0deg, #0A2540, #0A2540),
 linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+position: relative;
 }
+.hero-CTA{
+    position: relative;
+  z-index: 1;
+  color: #F8F9FA;
+  height: 100%; 
+}
+
+.hero-CTA::before{
+    content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/whatApp.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: cente;
+  opacity: 0.2;
+  z-index: -1; 
+}
+
 .hono{
 margin-top: 30p;
 padding: 50px 14px; 
@@ -24,16 +47,15 @@ color: #F8F9Ff;
     font-family: Lato;
 font-weight: 400;
 font-size: 14px;
-/* width: 1068px; */
 color: #F8F9FA;
 
 }
 
 .hono button{
     width: 270px;
-height: 35px;
-padding: 6px 8px !important;
-margin-top: 20px;
+height: 56px;
+padding: 16px 32px !important;
+margin-top: 50px 0px !important;
 border-radius: 4px;
 background: #FFD700;
 
@@ -44,6 +66,13 @@ background: #FFD700;
     margin-top: 20px;
 height: 240px;
 border-radius: 3px;
+object-fit: cover;
+}
+
+.hero-image{
+    width: 100%;
+    margin-top: 80px !important;
+    margin-left: 10px !important;
 }
 
 @media (min-width:768px) {

@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import img11 from '../assets/data1.png'
 import Hero from "../components/Hero";
+import { Link } from "react-router";
 
 const Home = () => {
   return (
@@ -19,7 +20,7 @@ const Home = () => {
         <hr />
         </div>
        
-        <p>
+        <p> 
           At NobleTechie, we believe that true innovation is more than just an
           idea, it’s all about impact that drives meaningful changes. This award
           recognizes individuals whose contributions have driven change, solved
@@ -38,7 +39,7 @@ const Home = () => {
         <div className="hrr">
         <hr />
         </div>
-        <p>
+        <p >
           A distinguished panel of industry leaders, innovators, and visionaries
           dedicated to recognizing individuals with contributions to technology.
         </p>
@@ -59,6 +60,20 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
+      <div className="CTA">
+    
+      <section className="foo1">
+        <h2>Are you pushing the boundaries of technology?</h2>
+        <p>Apply today and let your innovation be recognized.</p>
+
+        <Link to='/app'>
+        <button>Become a NobleTechie</button>
+        </Link>
+       
+      </section>
+
+      </div>
 
       <Footer/>
     </div>
