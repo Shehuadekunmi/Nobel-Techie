@@ -55,59 +55,77 @@ const Winners = () => {
     setVisibleCount((prev) => prev + initialCount);
   };
 
-  if (loading) return <p><Loading /></p>;
+  if (loading)
+    return (
+      <p>
+        <Loading />
+      </p>
+    );
 
   return (
     <div>
       <Header />
       <div className="winner-hero">
         <div className="winner-hero-CTA">
-
-        <h1 className="text-white py-lg-5">Meet the NobleTechie Winners</h1>
+          <h1 className="text-white py-lg-5">Meet the NobleTechie Winners</h1>
         </div>
       </div>
 
       <div className="winner-details11">
-     
-      <div className="py- winner-details">
-        {error ? (
-          <p style={{ color: "red" }}>{error}</p>
-        ) : (
-          winners.slice(0, visibleCount).map((winner) => (
-            <div
-              key={winner._id}
-              className="winner-detail pb-5 mb-5"
-              onClick={() => navigate(`/cert/${winner._id}`)}
-              style={{ cursor: "pointer" }}
-            >
-              <img
-                src={winner.image || winner}
-                alt={winner.name}
-                className="winner-detail-img"
-                loading="lazy"
-              />
-              <h5 className="d-flex justify-content-between mx-2 py-3">
-                {winner.candidateName}
-              </h5>
-              <hr />
-              <span className="mx-2">{winner.role}</span>
-              <hr />
-              <span className="mx-2">{winner.company}</span>
-            </div>
-          ))
-        )}
-       
-      </div>
-      <div className="view-more">
-      {visibleCount < winners.length && (
-          <div className="text-center mt-">
-            <button className="bt btn-primar" onClick={handleViewMore}>
-            Load More
-            </button>
-          </div>
-        )}
-      </div>
+        <div className="py- winner-details">
+          {error ? (
+            <p style={{ color: "red" }}>{error}</p>
+          ) : (
+            winners.slice(0, visibleCount).map((winner) => (
+              <div
+                key={winner._id}
+                className="winner-detail pb-5 mb-5"
+                onClick={() => navigate(`/cert/${winner._id}`)}
+                style={{ cursor: "pointer" }}
+              >
+                <img
+                  src={winner.image || winner}
+                  alt={winner.name}
+                  className="winner-detail-img"
+                  loading="lazy"
+                />
 
+                <div className="d-flex my-2 country-flag">
+
+                <h5 className=" mx-2 py-2">
+                  {winner.candidateName}
+                </h5>
+
+                  <img
+                    src={`https://flagcdn.com/64x48/${winner.country.toLowerCase()}.png`}
+                    alt="Country Flag"
+                    onError={(e) => {
+                      e.target.src = "/public/default-vite.svg";
+                    }}
+                    className=""
+                  />
+                  
+                </div>
+
+               
+                <hr />
+                <span className="mx-2">{winner.role}</span>
+                <hr />
+                <span className="mx-2">{winner.company}</span>
+                
+              </div>
+            ))
+          )}
+        </div>
+        <div className="view-more">
+          {visibleCount < winners.length && (
+            <div className="text-center mt-">
+              <button className="bt btn-primar" onClick={handleViewMore}>
+                Load More
+              </button>
+            </div>
+          )}
+        </div>
       </div>
       <Footer2 />
     </div>

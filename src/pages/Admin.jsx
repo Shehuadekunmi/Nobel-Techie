@@ -62,7 +62,7 @@ const Admin = () => {
             onChange={(e) => setPassword(e.target.value)}
           />{" "}
           <br />
-          <button className="bt" onClick={handleLogin} disabled={loading}>
+          <button className="btn btn-war" onClick={handleLogin} disabled={loading}>
             {loading ? "Signing in..." : "Sign in"}
           </button>
           {loading && (

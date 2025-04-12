@@ -5,6 +5,7 @@ import file from "../assets/file.png";
 import logo from "../assets/logo.png";
 import Pop from "../components/Pop";
 import API from "../api";
+import { countries } from "countries-list"; 
 
 const AdminPage = () => {
   const [formData, setFormData] = useState({
@@ -20,6 +21,12 @@ const AdminPage = () => {
     juryImage: null,
     blogContent: "",
   });
+
+  const countryNameToCode = Object.entries(countries).reduce((acc, [code, country]) => {
+    acc[country.name.toLowerCase()] = code; 
+    acc[country.name] = code; 
+    return acc;
+  }, {});
 
   const [errors, setErrors] = useState({});
   const [isPublished, setIsPublished] = useState(false);
@@ -121,7 +128,7 @@ const AdminPage = () => {
     <div className="adminpage">
       <div id="admin-header">
         <img src={logo} alt="Logo" />
-        <button className="bt" onClick={handleSubmit} disabled={loading}>
+        <button className="btn btn-war" onClick={handleSubmit} disabled={loading}>
           {loading ? "Publishing..." : "Publish"}
         </button>
       </div>
@@ -183,12 +190,23 @@ const AdminPage = () => {
 
 
           <input
-            type="text"
-            name="country"
-            placeholder="Country"
-            value={formData.country}
-            onChange={handleChange}
-          />
+  type="text"
+  name="country"
+  placeholder="Country (e.g., Nigeria)"
+  value={formData.country}
+  onChange={(e) => {
+    const countryName = e.target.value;
+    const isoCode = countryNameToCode[countryName.toLowerCase()] || countryName.toUpperCase();
+    
+   
+    setFormData({
+      ...formData,
+      country: isoCode, 
+      countryName: countryName, 
+    });
+  }}
+/>
+
           {errors.country && <small className="error">{errors.country}</small>} <br />
 
           <div className="admin-image">
