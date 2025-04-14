@@ -61,6 +61,7 @@ height: 68px;
 padding: 16px 32px;
 border-radius: 4px;
 background: #FFD700;
+border: none;
 }
 .pop span{
   color: #212529;
@@ -84,8 +85,10 @@ text-align: center;
  
   .pop{
     display: flex;
-    justify-content: space-around;
-    gap: 400px;
+  }
+  .pop button{
+    width: 400px;
+font-size: 24px;
   }
  
 }

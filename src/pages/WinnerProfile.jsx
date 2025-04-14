@@ -52,7 +52,6 @@ const WinnerProfile = () => {
               <h1>{winnerData.candidateName}</h1>
 
               <p className="my-2 mx-2 my-lg-3 winner-profile-desktop "> Certified Number-{winnerData.certificateNumber} </p>
-
              
             </div>
 
@@ -88,41 +87,17 @@ const WinnerProfile = () => {
           </div>
         </header>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <section className="profile-content">
           <div className="profile-img">
+            <div className="profile-image-wahala">
             <img
               src={winnerData.image}
               alt="Winner"
               className="mob"
               loading="lazy"
             />
+            </div>
+           
 
             <p className="mx-2 mx-lg-0">
               {winnerData.blogContent || "No blog content available"}

@@ -6,6 +6,7 @@ import logo from "../assets/logo.png";
 import Pop from "../components/Pop";
 import API from "../api";
 import { countries } from "countries-list"; 
+import { Link } from "react-router-dom";
 
 const AdminPage = () => {
   const [formData, setFormData] = useState({
@@ -127,7 +128,12 @@ const AdminPage = () => {
   return (
     <div className="adminpage">
       <div id="admin-header">
-        <img src={logo} alt="Logo" />
+      <Link to="/winner" >
+          <img
+            src={logo}
+            alt="Company Logo"
+          />
+        </Link>
         <button className="btn btn-war" onClick={handleSubmit} disabled={loading}>
           {loading ? "Publishing..." : "Publish"}
         </button>

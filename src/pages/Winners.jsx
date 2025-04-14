@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "../style/winner.css";
 import { useNavigate } from "react-router";
 import axios from "axios";
-import API from "../api";
 import Loading from "../components/Loading";
 import Header from "../components/Header";
 import Footer2 from "../components/Footer2";
@@ -16,7 +15,7 @@ const Winners = () => {
   const navigate = useNavigate();
   const API_URL = import.meta.env.VITE_API_URL;
 
-  // Detect screen size
+
   useEffect(() => {
     const updateInitialCount = () => {
       const isMobile = window.innerWidth <= 768;
@@ -55,6 +54,9 @@ const Winners = () => {
     setVisibleCount((prev) => prev + initialCount);
   };
 
+
+  const isButtonDisabled = visibleCount >= winners.length;
+
   if (loading)
     return (
       <p>
@@ -91,40 +93,41 @@ const Winners = () => {
                 />
 
                 <div className="d-flex my-2 country-flag">
-
-                <h5 className=" mx-2 py-2">
-                  {winner.candidateName}
-                </h5>
+                  <h5 className=" mx-2 py-2">{winner.candidateName}</h5>
 
                   <img
-                    src={`https://flagcdn.com/64x48/${winner.country.toLowerCase()}.png`}
+                    src={
+                      winner.country
+                        ? `https://flagcdn.com/64x48/${winner.country.toLowerCase()}.png`
+                        : "/public/default-vite.svg"
+                    }
                     alt="Country Flag"
                     onError={(e) => {
                       e.target.src = "/public/default-vite.svg";
                     }}
                     className=""
                   />
-                  
                 </div>
 
-               
                 <hr />
                 <span className="mx-2">{winner.role}</span>
                 <hr />
                 <span className="mx-2">{winner.company}</span>
-                
               </div>
             ))
           )}
         </div>
+        {/* Show "Load More" button only if there are more winners to display */}
         <div className="view-more">
-          {visibleCount < winners.length && (
-            <div className="text-center mt-">
-              <button className="bt btn-primar" onClick={handleViewMore}>
-                Load More
-              </button>
-            </div>
-          )}
+          <div className="text-center mt-">
+            <button
+              className="bt btn-primar"
+              onClick={handleViewMore}
+              disabled={isButtonDisabled}
+            >
+              Load More
+            </button>
+          </div>
         </div>
       </div>
       <Footer2 />
