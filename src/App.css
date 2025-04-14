@@ -21,6 +21,9 @@ border-radius: 4px;
   color: red;
   
 }
+button{
+  border: none;
+}
 
 /* html, body, #root {
   margin: 0;

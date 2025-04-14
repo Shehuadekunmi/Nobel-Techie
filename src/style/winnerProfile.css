@@ -6,7 +6,8 @@
 }
 .winner-profile {
   background: #fff3e7;
-  width: 100vw;
+  width: 100% ;
+  overflow-x: hidden;
   padding-bottom: 50px 0px !important;
 }
 
@@ -60,6 +61,12 @@
   font-weight: 500;
   font-size: 18px;
 }
+.profile-text p{
+  font-family: Lato;
+font-weight: 400;
+font-size: 14px;
+color: #6C757D;
+}
 
 .country-flag {
   justify-content: space-between;
@@ -80,11 +87,37 @@
     width: 95%;
     line-height: 40px;
     margin: 0px auto;
+    text-align: justify;
+    padding-top: 30px;
+  }
+
+  .profile-text p{
+    margin: 0px;
+    padding-top: 0px;
   }
 
   .profile-image-wahala img {
     height: 400px;
   }
+
+  .profile-image-wahala {
+    float: left;
+    margin-right: 20px; /* space between image and text */
+    height: 400px;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .profile-image-wahala img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+
+
 }
 
 @media (min-width: 960px) {
@@ -102,6 +135,7 @@
 text-align: justify;
     line-height: 48px;
     padding-top: 30px !important;
+    
   }
 
   .winner-profile h2 {
@@ -181,11 +215,13 @@ text-align: justify;
   }
   .profile-text h2 {
     font-size: 30px;
+    padding: 0px;
     margin-right: 300px;
   }
 
   .profile-text p {
     font-size: 18px;
     margin-right: 300px;
+    padding: 0px !important;
   }
 }

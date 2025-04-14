@@ -109,6 +109,7 @@ const WinnerProfile = () => {
           <img src={winnerData.juryImage} alt="Judge" loading="lazy" />
           <div className="profile-text">
             <h2>{winnerData.juryName || "No Judge Name"}</h2>
+            <p>NobleTechie Judge</p>
           </div>
         </div>
 
