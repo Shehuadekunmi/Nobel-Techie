@@ -106,7 +106,7 @@ const Certificate = () => {
 
         <div className="winner-dat">
               <div className="certificate-flag">
-              <h5 className="my-2 ">
+              <h5 className="mt-2 ">
                   {" "}
                   {winner.candidateName}{" "}
                 </h5> 
@@ -159,7 +159,6 @@ const Certificate = () => {
                   {winner.candidateName}{" "}
                 </h5> 
                 </div>
-              
 
                <h5>
                 <img
@@ -172,12 +171,9 @@ const Certificate = () => {
                 />
                  </h5>
               </div>
-              {/* <input type="text" disabled='true' id="inpu" /> */}
 
               <div className="my-lg-  ">
                 <span className="detail-field">{winner.role}</span>
-        
-                {/* <input  disabled='true' id="inpu" /> */}
               </div>
 
               <div className="my-lg-">

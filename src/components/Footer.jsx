@@ -29,8 +29,7 @@ const footer = () => {
 
         <footer className="foo3">
           <ul>
-                   <Link to='/' className='text-decoration-none'>  <li>About Us</li></Link>
-                   <Link to='/app' className='text-decoration-none'>    <li>How to Apply</li></Link>
+                   <Link to='/app' className='text-decoration-none '>    <li>How to Apply</li></Link>
                    <a href="#judge" className='text-decoration-none'> <li>Meet the Noble Judges</li> </a>
                    <Link to='/winner' className='text-decoration-none'>   <li>Noble Techies</li></Link>
                    <Link to='/app' className='text-decoration-none'>  <li>Apply Now</li></Link>

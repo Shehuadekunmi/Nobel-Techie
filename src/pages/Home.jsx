@@ -39,7 +39,7 @@ const Home = () => {
         <div className="hrr">
         <hr />
         </div>
-        <p >
+        <p > 
           A distinguished panel of industry leaders, innovators, and visionaries
           dedicated to recognizing individuals with contributions to technology.
         </p>

@@ -27,13 +27,14 @@ color: #F8F9FA;
   font-weight: 400;
   font-size: 16px;
   color: #DEE2E6;
+ 
 }
 .certificate-mobile input{
-  width: 300px;
+  width: 100%;
 border: none;
 border-bottom: 1px solid #CED4DA;
 background-color: transparent;
-margin-bottom: 10px;
+margin-bottom: 5px;
 }
 
 .cert-detail-img {

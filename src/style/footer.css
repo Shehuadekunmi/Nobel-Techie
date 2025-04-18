@@ -49,6 +49,7 @@ p {
   font-weight: 400;
   font-size: 14px;
   list-style-type: none;
+  padding: 4px 0px;
 }
 .foo3 ul {
   padding-left: 0px;
@@ -103,5 +104,6 @@ p {
   .foo3 li{
     line-height: 40px;
     font-size: 20x;
+    padding: 0px;
   }
 }
