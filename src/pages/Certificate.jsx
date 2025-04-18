@@ -153,10 +153,13 @@ const Certificate = () => {
           >
             <div className="winner-data">
               <div className=" certificate-flag-desktop">
-              <h5 className=" ">
+                <div className="winner-candidateName ">
+                <h5 className=" ">
                   {" "}
                   {winner.candidateName}{" "}
-                </h5>
+                </h5> 
+                </div>
+              
 
                <h5>
                 <img
@@ -169,12 +172,12 @@ const Certificate = () => {
                 />
                  </h5>
               </div>
-              <input type="text" disabled='true' id="inpu" />
+              {/* <input type="text" disabled='true' id="inpu" /> */}
 
-              <div className="my-lg-">
+              <div className="my-lg-  ">
                 <span className="detail-field">{winner.role}</span>
         
-                <input  disabled='true' id="inpu" />
+                {/* <input  disabled='true' id="inpu" /> */}
               </div>
 
               <div className="my-lg-">

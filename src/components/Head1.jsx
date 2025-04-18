@@ -71,7 +71,7 @@ const Head1 = () => {
 
                 <Link
                   to="/app"
-                  className=" nav-link text-decoration-none text-dark fw-bold tag mx-2 pt-lg-3 Nav"
+                  className="  text-decoration-none text-dark fw-bold tag mx-2 pt-lg-3 Nav"
                 >
                   <button className="btn btn-warnin  ">Apply Now</button>
                 </Link>

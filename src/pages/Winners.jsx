@@ -124,7 +124,7 @@ const Winners = () => {
               className="bt btn-primar"
               onClick={handleViewMore}
               disabled={isButtonDisabled}
-            >
+            > 
               Load More
             </button>
           </div>

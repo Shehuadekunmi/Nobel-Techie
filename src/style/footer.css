@@ -8,6 +8,7 @@ h3,
 li,
 p {
   color: #f8f9fa;
+
 } 
 
 .foo2 button {
@@ -42,6 +43,7 @@ p {
   font-size: 14px;
   border-radius: 4px;
 }
+
 .foo3 li {
   font-family: Lato;
   font-weight: 400;
