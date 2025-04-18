@@ -28,14 +28,14 @@ const Head1 = () => {
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: "100p" }}
-              navbarScrol
+              navbarScroll
             ></Nav>
 
             <div className="d-flex jusitify-aroun gap-4 mx-">
               <Nav
                 className="me-auto my-2 my-lg-0 "
                 style={{ maxHeight: "100px" }}
-                navbarScrol
+                navbarScroll
               >
                 <Link
                   to="/"
