@@ -148,7 +148,7 @@ const handleSubmit = async (e) => {
   return (
     <div className="adminpage">
       <div id="admin-header">
-        <Link to="/winner">
+        <Link to="/dashboard">
           <img src={logo} alt="Company Logo" />
         </Link>
         <button className="btn btn-war" onClick={handleSubmit} disabled={loading}>
