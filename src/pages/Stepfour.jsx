@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import l from "../assets/logo.png";
 import { Link } from "react-router-dom";
+import Loading from "../components/Loading";
 
 const Stepfour = () => {
   const [outcome, setOutcome] = useState("");
@@ -234,9 +235,9 @@ const Stepfour = () => {
           <button
             className="next-btn"
             onClick={handleSubmit}
-            disabled={isSubmitting || !file1 || !file2}
+            disabled={isSubmitting || !file1 || !file2 || confirmed}
           >
-            {isSubmitting ? "Submitting..." : "Submit Application →"}
+            {isSubmitting ? "Submiting..." : "Submit Application →"}
           </button>
         </div>
       </div>

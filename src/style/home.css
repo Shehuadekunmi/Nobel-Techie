@@ -32,7 +32,7 @@
 
 .jud {
   height: 774px;
-  padding: 64px 20px;
+  padding: 64px 10px;
   gap: 40px;
   background: #fff3e7;
 }
@@ -41,14 +41,13 @@
   font-weight: 500;
   font-size: 28px;
 }
-/* .jud p{
-  padding: 400px 0px;
-} */
+
 .jud1 img {
-  width: 300px;
+  width: 250px;
   border-radius: 4px;
   height: 400px;
   background: #dcb9001a;
+
 }
 
 
@@ -178,7 +177,7 @@
     width: 841px;
     font-size: 48px;
     padding-left: 20px;
-  }
+  } 
 
   .jud p {
     width: 500px;
@@ -195,10 +194,13 @@
     width: 100%;
     border: 2px solid #000000;
   }
+  .jd1{
+      width: 680px;
+  }
   .jud1 img {
-    width: 500px;
+    width: 630px;
     height: 600px;
-    margin-left: 20px;
+
   }
   .foo1{
     padding: 40px;

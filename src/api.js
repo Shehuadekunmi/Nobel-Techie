@@ -16,8 +16,10 @@ const API = axios.create({
 export const setAuthToken = (token) => {
   if (token) {
     API.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    localStorage.setItem("token", token);
   } else {
     delete API.defaults.headers.common["Authorization"];
+    localStorage.removeItem("token");
   }
 };
 
@@ -28,6 +30,16 @@ export const loginUser = async (email, password) => {
     return response.data; // Return response data (e.g., token)
   } catch (error) {
     throw error.response?.data?.message || "Login failed"; // Throw error message
+  }
+};
+
+export const logoutUser = async () => {
+  try {
+    await API.post("/logout");
+  } catch (error) {
+    console.error("Logout error:", error);
+  } finally {
+    setAuthToken(null); // Clear token from axios and localStorage
   }
 };
 

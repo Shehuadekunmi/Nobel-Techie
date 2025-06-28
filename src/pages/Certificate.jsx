@@ -23,7 +23,7 @@ const Certificate = () => {
         try {
           const res = await axios.get(`${API_URL}/auth/winners/${winnerId}`, {
             signal: controller.signal,
-            params: { ts: Date.now() }, // Cache buster
+            params: { ts: Date.now() }, 
           });
 
           if (!res.data?.data?.winner) {
@@ -31,7 +31,6 @@ const Certificate = () => {
           }
 
           setWinner(res.data.data.winner);
-          // setCertNum(res.data.data.winner.certificateNumber);
           setError("");
         } catch (error) {
           if (error.name !== "CanceledError") {

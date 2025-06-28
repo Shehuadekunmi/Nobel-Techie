@@ -1,7 +1,8 @@
 import './App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 import Loading from './components/Loading'
+import Dashboard from './pages/Dashboard'
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'))
@@ -14,8 +15,15 @@ const Message = lazy(() => import('./pages/Message'))
 const Winners = lazy(() => import('./pages/Winners'))
 const Certificate = lazy(() => import('./pages/Certificate'))
 const WinnerProfile = lazy(() => import('./pages/WinnerProfile'))
+const dashboard = lazy(() => import('./pages/Dashboard'))
+
 const Admin = lazy(() => import('./pages/Admin'))
 const AdminPage = lazy(() => import('./pages/AdminPage'))
+
+const PrivateRoute = ({ children }) => {
+  const token = localStorage.getItem("token");
+  return token ? children : <Navigate to="/admin" replace />;
+};
 
 function App() {
   return (
@@ -34,6 +42,16 @@ function App() {
         <Route path='/admin' element={<Admin />} />
         <Route path='/adminpage' element={<AdminPage />} />
         <Route path='/winnerprofile/:id' element={<WinnerProfile />} />
+        <Route path='/edit/:id' element={<AdminPage />} />
+        <Route
+  path="/dashboard"
+  element={
+    <PrivateRoute>
+      <Dashboard />
+    </PrivateRoute>
+  }
+/>
+
       </Routes>
     </Suspense>
   )

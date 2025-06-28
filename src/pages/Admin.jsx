@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { loginUser, setAuthToken } from "../api";
 import "../style/admin.css";
 import { useNavigate } from "react-router";
@@ -7,30 +7,42 @@ import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Admin = () => {
-  const [loginID, setLoginID] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async () => {
-    setLoading(true); // Show loader
-    setError("");
-    setSuccess("");
-
-    try {
-      const data = await loginUser(loginID, password);
-      localStorage.setItem("token", data.token); // Store token
-      setAuthToken(data.token); // Set token for future requests
-      setSuccess("Login successful!");
-      setTimeout(() => navigate("/adminpage"), 1500);
-    } catch (err) {
-      setError(err);
-    } finally {
-      setLoading(false); // Hide loader
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigate("/dashboard");
     }
-  };
+  }, [navigate]);
+
+const handleLogin = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  setError("");
+
+  try {
+    const data = await loginUser(email, password);
+    // console.log("Login response:", data);
+    
+    if (data.token) {
+      localStorage.setItem("token", data.token);
+      setAuthToken(data.token);
+      navigate("/dashboard");
+    } else {
+      throw new Error("No token received");
+    }
+  } catch (err) {
+    setError(err.message);
+    localStorage.removeItem("token"); 
+  } finally {
+    setLoading(false);
+  }
+};
   console.log("Stored Token:", localStorage.getItem("token"));
 
   return (
@@ -51,8 +63,8 @@ const Admin = () => {
           <input
             type="text"
             placeholder="Login ID"
-            value={loginID}
-            onChange={(e) => setLoginID(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />{" "}
           <br />
           <input

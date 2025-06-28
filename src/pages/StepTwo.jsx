@@ -10,8 +10,8 @@ const StepTwo = () => {
     organization: {
       name: "",
       website: "",
-      position: ""
-    }
+      position: "",
+    },
   });
 
   const [errors, setErrors] = useState({});
@@ -24,16 +24,28 @@ const StepTwo = () => {
       ...prev,
       organization: {
         ...prev.organization,
-        [name]: value
-      }
+        [name]: value,
+      },
     }));
   };
 
   const validate = () => {
     const newErrors = {};
-    if (!formData.organization.name.trim()) newErrors.organization = { ...newErrors.organization, name: "Organization name is required" };
-    if (!formData.organization.website.trim()) newErrors.organization = { ...newErrors.organization, website: "Website is required" };
-    if (!formData.organization.position.trim()) newErrors.organization = { ...newErrors.organization, position: "Position is required" };
+    if (!formData.organization.name.trim())
+      newErrors.organization = {
+        ...newErrors.organization,
+        name: "Organization name is required",
+      };
+    if (!formData.organization.website.trim())
+      newErrors.organization = {
+        ...newErrors.organization,
+        website: "Website is required",
+      };
+    if (!formData.organization.position.trim())
+      newErrors.organization = {
+        ...newErrors.organization,
+        position: "Position is required",
+      };
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -57,8 +69,7 @@ const StepTwo = () => {
   return (
     <div className="d-lg-flex information">
       <div className="personal position-relative">
-
-      <Link to="/" className="pt-lg-3 mx-lg-4 ">
+        <Link to="/" className="pt-lg-3 mx-lg-4 ">
           {" "}
           <img
             src={l}
@@ -66,7 +77,6 @@ const StepTwo = () => {
             className="m-2 m-lg-4 position-absolute
             top-0
            start-0 "
-           
           />{" "}
         </Link>
 
@@ -85,7 +95,9 @@ const StepTwo = () => {
               onChange={handleChange}
               className={errors.organization?.name ? "error" : ""}
             />
-            {errors.organization?.name && <small style={{ color: "red" }}>{errors.organization.name}</small>}
+            {errors.organization?.name && (
+              <small style={{ color: "red" }}>{errors.organization.name}</small>
+            )}
             <br />
 
             <input
@@ -96,7 +108,11 @@ const StepTwo = () => {
               onChange={handleChange}
               className={errors.organization?.website ? "error" : ""}
             />
-            {errors.organization?.website && <small style={{ color: "red" }}>{errors.organization.website}</small>}
+            {errors.organization?.website && (
+              <small style={{ color: "red" }}>
+                {errors.organization.website}
+              </small>
+            )}
             <br />
 
             <input
@@ -107,7 +123,11 @@ const StepTwo = () => {
               onChange={handleChange}
               className={errors.organization?.position ? "error" : ""}
             />
-            {errors.organization?.position && <small style={{ color: "red" }}>{errors.organization.position}</small>}
+            {errors.organization?.position && (
+              <small style={{ color: "red" }}>
+                {errors.organization.position}
+              </small>
+            )}
             <br />
 
             <button type="submit" className="bt" disabled={isSubmitting}>

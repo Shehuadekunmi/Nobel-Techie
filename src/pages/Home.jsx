@@ -3,6 +3,7 @@ import "../style/home.css";
 import img from "../assets/data.png";
 import img1 from "../assets/image1.png";
 import img6 from "../assets/img6.png";
+import pro from "../assets/profile.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import img11 from '../assets/data1.png'
@@ -50,13 +51,13 @@ const Home = () => {
             <p>Thony Da Silva Romero</p>
           </div>
           <div className="jd1">
-            <img src={img1} alt="" loading="lazy" />
-            <p>Thony Da Silva Romero</p>
+            <img src={pro} alt="" loading="lazy" />
+            <p>Viktorija Vlasenko</p>
           </div>
 
           <div className="jd1">
             <img src={img6} alt="" loading="lazy" />
-            <p>Izabella Veloso</p>
+            <p>Mark Greene</p>
           </div>
         </div>
       </section>
