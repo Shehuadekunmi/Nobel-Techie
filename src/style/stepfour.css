@@ -103,7 +103,7 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 55%;
     height: 808px;
     margin: 0px auto;
   }
@@ -112,7 +112,7 @@ textarea {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 40%;
+    width: 45%;
     height: 808px;
     margin-top: 0px;
   }
@@ -135,5 +135,10 @@ textarea {
   .left-section h1 {
     font-size: 60px;
     padding-left: 5rem;
+  }
+
+  .outcome, .buttons{
+    width: 90%;
+    margin: 0 auto;
   }
 }
