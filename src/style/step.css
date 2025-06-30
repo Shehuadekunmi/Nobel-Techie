@@ -76,7 +76,7 @@ font-size: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-   width: 60%;
+   width: 50%;
    height: 808px;
    margin: 0px auto;
 }
@@ -84,12 +84,12 @@ font-size: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 50%;
     height: 808px;
     margin-top: 0px;
 }
 .person-form{
-    width: 90%;
+    width: 80%;
     margin: 0px auto;
 }
 .personal h1{

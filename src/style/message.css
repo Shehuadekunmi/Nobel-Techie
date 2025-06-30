@@ -29,8 +29,8 @@
 
   @media (min-width:960px) {
     .mod{
-      height: 1200px;
-      display: flex;
+      height: 100vh;
+      display: fle;
       flex-direction: column;
       justify-content: center;
       align-items: center;

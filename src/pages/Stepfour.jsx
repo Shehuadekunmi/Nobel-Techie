@@ -32,6 +32,7 @@ const Stepfour = () => {
       step4Data.confirmed = confirmed;
     }
   }, [outcome, confirmed]);
+  
 
   const handleFileChange = (e, setter) => {
     const selectedFile = e.target.files[0];
@@ -235,7 +236,7 @@ const Stepfour = () => {
           <button
             className="next-btn"
             onClick={handleSubmit}
-            disabled={isSubmitting || !file1 || !file2 || confirmed}
+            disabled={isSubmitting || !file1 || !file2}
           >
             {isSubmitting ? "Submiting..." : "Submit Application →"}
           </button>

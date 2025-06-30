@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "../style/step.css";
@@ -17,6 +17,13 @@ const StepTwo = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const savedData = localStorage.getItem("applicationStep2");
+    if (savedData) {
+      setFormData(JSON.parse(savedData))
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
